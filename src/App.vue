@@ -1,8 +1,6 @@
 <template>
   <div class="bg-zinc-800 h-screen">
-
     <AddSection />
-
 
     <!-- Buttons -->
 
@@ -11,7 +9,11 @@
       <buttons class="ml-10 btn-primary">Add Todos</buttons>
     </div>
 
-    <TodoItem />
+    <!-- ToDo Items -->
+
+    <div class="flex justify-center items-center pt-10">
+      <TodoItem />
+    </div>
   </div>
 </template>
 
