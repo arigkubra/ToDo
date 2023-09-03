@@ -1,5 +1,8 @@
 <template>
-    <span class="mt-2 text-white">{{ itemCount }} adet todo vardır...</span>
+    <div class="flex  justify-end">
+        <span class="mt-2 text-white">{{ itemCount }} adet todo vardır...</span>
+    </div>
+    
 </template>
 
 <script>

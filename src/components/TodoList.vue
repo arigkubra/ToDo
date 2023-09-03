@@ -1,5 +1,5 @@
 <template>
-    <ul>
+    <ul class="flex flex-col justify-center">
         <TodoItem 
             class="text-white"
             v-for="todoItem in getData.todoList"

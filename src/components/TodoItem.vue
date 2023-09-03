@@ -3,7 +3,7 @@
     <span>{{ item.text }}</span>
     <button
     @click="deleteItem(item)" 
-    class="bg-red-800"
+    class="btn btn-sm bg-red-600"
     >Delete</button>
   </li>
 </template>

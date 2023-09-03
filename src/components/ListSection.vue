@@ -1,7 +1,9 @@
 <template>
-    <TodoList />
-    <ResultBar :itemCount="getData.todoList.length" />
-    <!-- v-bind kullanarak itemCount'un güncel sayısını ResultBar component'ı içine yazdırabiliyoruz. -->
+    <div class="flex flex-col w-96 mx-auto mt-5">
+        <TodoList />
+        <ResultBar :itemCount="getData.todoList.length" />
+        <!-- v-bind kullanarak itemCount'un güncel sayısını ResultBar component'ı içine yazdırabiliyoruz. -->
+    </div>
 </template>
 
 <script>

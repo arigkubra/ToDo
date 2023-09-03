@@ -43,11 +43,14 @@ export default {
         text: todo,
         });
       },
-    
+    clearAll(todoList){
+      
+    },
     deleteItem(todoItem) {
       this.getData.todoList = this.getData.todoList.filter((t) => t != todoItem)
       }
     },
+    
  
   
 };

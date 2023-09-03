@@ -23,9 +23,14 @@
 
     <div class="flex justify-center items-center">
 <!-- Burada ise click event'i tetiklendiğinde addITem fonksiyonunu çalıştır ve argüman olarak inputtan gelen todoText'i vermesini sağlıyorum -->
-      <button @click="addItem(todoText)" class="ml-10 btn-primary"  >Add Todos</button>
+      <button class="btn btn-neutral">Clear Todos</button>
+      <button @click="addItem(todoText);
+       clearInput()" 
+       class="ml-10 btn btn-primary"  >
+       Add Todos
+      </button>
 
-      <button class="btn-neutral">Clear Todos</button>
+
     </div>
   </div>
 
@@ -45,6 +50,11 @@ export default{
         required: true
       }
     },
+    methods:{
+      clearInput(){
+        this.todoText = null;
+      }
+    }
 }
 
 </script>
