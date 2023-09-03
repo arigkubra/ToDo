@@ -1,38 +1,55 @@
 <template>
   <div class="bg-zinc-800 h-screen">
-    <AddSection />
+    <h1
+      class="flex flex-col justify-center items-center font-bold text-3xl pt-10 pb-7 text-white"
+    >
+      Todo App
+    </h1>
 
-    <!-- Buttons -->
+    <AddSection :addItem="addItem" />
 
-    <div class="flex justify-center items-center">
-      <buttons class="btn-neutral">Clear Todos</buttons>
-      <buttons class="ml-10 btn-primary">Add Todos</buttons>
-    </div>
-
-    <!-- ToDo Items -->
-
-    <div class="flex justify-center items-center pt-10">
-      <TodoItem />
-    </div>
+    <ListSection />
   </div>
 </template>
 
 <script>
 import AddSection from "./components/AddSection.vue";
-import TodoItem from "./components/TodoItem.vue";
-import Buttons from "./components/Buttons.vue";
+import ListSection from "./components/ListSection.vue";
 export default {
-  name: "App",
+  data(){
+    return{
+      getData: {
+        todoList: [
+          { id: 1, text:"First Todo" },
+          { id: 2, text:"Second Todo" },
+        ]
+      }
+    }
+  },
+  provide(){
+    return{
+      getData: this.getData,
+      deleteItem : this.deleteItem
+    }
+  },
   components: {
     AddSection,
-    TodoItem,
-    Buttons,
+    ListSection,
   },
   methods: {
-    addNewTodo(e) {
-      console.log(event.target.value);
+    addItem(todo) {
+      this.getData.todoList.push({
+        id: new Date().getTime(), //unique bir değer oluşturmak için şu anki saati ve tarihi milisaniye cinsinden bir sayıya dönüştürür. Id oluşturmak için kullanılır.
+        text: todo,
+        });
+      },
+    
+    deleteItem(todoItem) {
+      this.getData.todoList = this.getData.todoList.filter((t) => t != todoItem)
+      }
     },
-  },
+ 
+  
 };
 </script>
 

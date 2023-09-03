@@ -1,0 +1,26 @@
+<template>
+    <TodoList />
+    <ResultBar :itemCount="getData.todoList.length" />
+    <!-- v-bind kullanarak itemCount'un güncel sayısını ResultBar component'ı içine yazdırabiliyoruz. -->
+</template>
+
+<script>
+import TodoList from './TodoList.vue'; 
+import ResultBar from './ResultBar.vue'; 
+
+
+export default{
+    components:{
+        TodoList,
+        ResultBar,
+    },
+    inject: ["getData"], // inject kullanarak parent component'ımız olan app.vue'ya erişim sağladık.
+    props:{ //props kullanarak erişim sağladığımız app.vue içinden todoList'imizi çektik.
+        todoList:{
+            type: Array,
+            required: true
+        }
+    }
+}
+
+</script>

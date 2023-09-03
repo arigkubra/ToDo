@@ -1,26 +1,16 @@
 <template>
-  <div class="overflow-x-auto w-96 text-white">
-    <table class="table">
-      <tbody>
-        <tr>
-          <div class="form-control ">
-            <label class="cursor-pointer label">
-              <span class="label-text text-white">Remember me</span>
-              <input
-                type="checkbox"
-                checked="checked"
-                class="checkbox checkbox-warning"
-              />
-            </label>
-          </div>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <li class="flex justify-between items-center mt-5">
+    <span>{{ item.text }}</span>
+    <button
+    @click="deleteItem(item)" 
+    class="bg-red-800"
+    >Delete</button>
+  </li>
 </template>
 
 <script>
 export default {
-  components: "TodoItem",
+  inject:["deleteItem"],
+  props:["item"],
 };
 </script>
