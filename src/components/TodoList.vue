@@ -1,3 +1,4 @@
+todolist.vue
 <template>
     <ul class="flex flex-col justify-center">
         <TodoItem 
@@ -24,24 +25,3 @@ export default{
 
 
 </script>
-
-
-
-<!-- <div class="overflow-x-auto w-96 text-white">
-    <table class="table">
-      <tbody>
-        <tr>
-          <div class="form-control ">
-            <label class="cursor-pointer label">
-              <span class="label-text text-white">{{ item }}</span>
-              <input
-                type="checkbox"
-                
-                class="checkbox checkbox-warning"
-              />
-            </label>
-          </div>
-        </tr>
-      </tbody>
-    </table>
-  </div> -->
