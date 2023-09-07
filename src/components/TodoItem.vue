@@ -1,9 +1,8 @@
 todoItem.vue
 <template>
-  <li class="flex justify-between items-center mt-5 text-white">
+  <li class="flex justify-around items-center mt-5  text-white">
     <span 
     v-if="!item.editing"
-    class="w-56"
     >{{ item.text }}</span>
     <input
       v-else
@@ -12,19 +11,20 @@ todoItem.vue
       @keyup.enter="saveEdit"
       class="text-black"
     />
-    <button @click="toggleEdit" class="bg-blue-300">
-      {{ item.editing ? "Save" : "Edit" }}
-    </button>
-    <button @click="deleteItem(item)" class="btn btn-sm bg-red-600">
-      Delete
-    </button>
+    <buttons @click="deleteItem(item)" class="btn btn-sm bg-red-600">Delete</buttons> 
+    <buttons @click="toggleEdit" class="btn btn-sm bg-blue-300">{{ item.editing ? "Save" : "Edit" }}</buttons>
+    
   </li>
 </template>
 
 <script>
+import Buttons from './Buttons.vue';
 export default {
   inject: ["deleteItem"],
   props: ["item"],
+  components:{
+    Buttons,
+  },
   methods: {
     toggleEdit() {
       // Düzenleme modunu ters çevir (true ise false, false ise true)
@@ -34,5 +34,6 @@ export default {
       this.toggleEdit(); // Düzenleme modunu kapat
     },
   },
+  
 };
 </script>
