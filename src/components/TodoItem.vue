@@ -7,7 +7,6 @@ todoItem.vue
     <input
       v-else
       v-model="item.text"
-      @blur="saveEdit"
       @keyup.enter="saveEdit"
       class="text-black"
     />

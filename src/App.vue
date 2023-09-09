@@ -19,10 +19,7 @@ export default {
   data(){
     return{
       getData: {
-        todoList: [
-          { id: 1, text:"First Todo", editing:false },
-          { id: 2, text:"Second Todo", editing:false },
-        ]
+        todoList: []
       }
     }
   },
@@ -59,6 +56,7 @@ export default {
       this.getData.todoList = this.getData.todoList.filter((t) => t != todoItem)
       }
     },
+    
     
     
  

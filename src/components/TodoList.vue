@@ -13,7 +13,7 @@ todolist.vue
     
 </template>
 <script>
-import { inject } from 'vue';
+
 import TodoItem from './TodoItem.vue';
 export default{
     inject:["getData"],
