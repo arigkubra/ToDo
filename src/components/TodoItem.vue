@@ -1,7 +1,14 @@
-todoItem.vue
 <template>
-  <li class="flex justify-around items-center mt-5  text-white">
+  <li 
+   
+    class="flex justify-between  items-center mt-5  text-white">
+    <input 
+      type="checkbox"  
+      class="checkbox checkbox-warning"
+      v-model="item.completed"
+      />
     <span 
+    :style="{ 'text-decoration': item.completed ? 'line-through' : 'none' }"
     v-if="!item.editing"
     >{{ item.text }}</span>
     <input
