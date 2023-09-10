@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col w-96 mx-auto mt-5">
+    <div class="flex flex-col w-72 sm:w-2/5 mx-auto  mt-6">
         <TodoList />
         <ResultBar :itemCount="getData.todoList.length" />
         <!-- v-bind kullanarak itemCount'un güncel sayısını ResultBar component'ı içine yazdırabiliyoruz. -->

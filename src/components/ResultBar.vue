@@ -1,6 +1,6 @@
 <template>
     <div class="flex  justify-end">
-        <span class="mt-2 text-white">{{ itemCount }} adet todo vardır...</span>
+        <span class="mt-2 text-white">There are {{ itemCount }} things to do ...</span>
     </div>
     
 </template>

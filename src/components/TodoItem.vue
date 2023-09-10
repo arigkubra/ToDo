@@ -1,24 +1,26 @@
 <template>
   <li 
-   
     class="flex justify-between  items-center mt-5  text-white">
     <input 
       type="checkbox"  
-      class="checkbox checkbox-warning"
+      class="checkbox"
       v-model="item.completed"
       />
-    <span 
+    <div
+    class="whitespace-normal w-full  break-all ml-5"
     :style="{ 'text-decoration': item.completed ? 'line-through' : 'none' }"
     v-if="!item.editing"
-    >{{ item.text }}</span>
+    >{{ item.text }}</div>
     <input
       v-else
       v-model="item.text"
       @keyup.enter="saveEdit"
-      class="text-black"
+      class="text-black sm:w-full w-3/4 ml-2"
     />
-    <buttons @click="deleteItem(item)" class="btn btn-sm bg-red-600">Delete</buttons> 
-    <buttons @click="toggleEdit" class="btn btn-sm bg-blue-300">{{ item.editing ? "Save" : "Edit" }}</buttons>
+    <div class="flex">
+      <buttons @click="toggleEdit" class="btn btn-primary text-white sm:btn-sm ">{{ item.editing ? "Save" : "Edit" }}</buttons>
+      <buttons @click="deleteItem(item)" class="btn text-white sm:btn-sm bg-gray-600 hover:bg-red-700">Delete</buttons> 
+    </div>
     
   </li>
 </template>

@@ -4,7 +4,7 @@
 
     <!-- Input Area -->
 
-    <div class="form-control mb-5 w-full max-w-xs">
+    <div class="form-control mb-5 sm:w-full w-3/4  max-w-xs">
       <label  class="label">
         <span class="label-text text-white">New ToDo</span>
       </label>
@@ -15,7 +15,7 @@
         id="todoText"
         type="text"
         placeholder="Enter Task..."
-        class="input input-bordered w-full max-w-xs"
+        class="input   caret-pink-500 "
       />
     </div>
     
@@ -25,10 +25,10 @@
 <!-- Burada ise click event'i tetiklendiğinde addITem fonksiyonunu çalıştır ve argüman olarak inputtan gelen todoText'i vermesini sağlıyorum -->
       <button 
       @click="clearAllHandler"
-      class="btn btn-neutral">Clear Todos</button>
+      class="btn btn-neutral btn-sm">Clear Todos</button>
       <button @click="addItem(todoText);
        clearInput()" 
-       class="ml-10 btn btn-primary"  >
+       class="ml-10 btn btn-neutral hover:bg-pink-700 text-white btn-sm">
        Add Todos
       </button>
 

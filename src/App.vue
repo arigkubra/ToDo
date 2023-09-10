@@ -1,5 +1,8 @@
 <template>
-  <div class="bg-zinc-800 min-h-screen ">
+  <div 
+    class="bg-indigo-300 min-h-screen sm:min-h-0 sm:h-screen sm:w-full sm:text-base text-sm">
+  
+
     <h1
       class="flex flex-col justify-center items-center font-bold text-3xl pt-10 pb-7 text-white"
     >
