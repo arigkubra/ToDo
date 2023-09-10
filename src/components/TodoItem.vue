@@ -1,9 +1,9 @@
 <template>
   <li 
-    class="flex justify-between  items-center mt-5  text-white">
+    class="flex justify-between  items-center mt-5 bg-indigo-900 rounded-lg p-3  text-white">
     <input 
       type="checkbox"  
-      class="checkbox"
+      class="checkbox border-slate-300"
       v-model="item.completed"
       />
     <div
