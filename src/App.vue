@@ -52,17 +52,13 @@ export default {
       },
       clearAll(todoList) {
       this.getData.todoList = [];
-      console.log("test");
     },
     
     deleteItem(todoItem) {
       this.getData.todoList = this.getData.todoList.filter((t) => t != todoItem)
       }
     },
-    
-    
-    
- 
-  
+
+
 };
 </script>

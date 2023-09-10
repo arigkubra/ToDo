@@ -33,14 +33,16 @@ export default {
   components:{
     Buttons,
   },
+  
   methods: {
     toggleEdit() {
-      // Düzenleme modunu ters çevir (true ise false, false ise true)
+      // Düzenleme modunun değerini değiştirir. 
       this.item.editing = !this.item.editing;
     },
     saveEdit() {
-      this.toggleEdit(); // Düzenleme modunu kapat
+      this.toggleEdit(); // Düzenleme modunu kapatır.
     },
+    
   },
   
 };
