@@ -12,7 +12,7 @@ Features of this todolist:
 
 ## View
 
-[![Video]([https://example.com/video.mp4](https://drive.google.com/file/d/1yHle6kDImd86ex5-ne3DkWYSw9P9cTYY/view?usp=sharing))]
+[![Video]([https://example.com/video.mp4](https://drive.google.com/file/d/1yHle6kDImd86ex5-ne3DkWYSw9P9cTYY/view?usp=sharing))] (https://drive.google.com/file/d/1yHle6kDImd86ex5-ne3DkWYSw9P9cTYY/view?usp=sharing)
 
 
 
