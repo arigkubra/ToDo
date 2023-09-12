@@ -3,7 +3,7 @@ todolist.vue
     <ul class="flex flex-col justify-center">
         <TodoItem 
             class="text-white"
-            v-for="todoItem in getData.todoList"
+            v-for="todoItem in todoListData.todoList"
             :key="todoItem.id"
             :item="todoItem"
         
@@ -16,7 +16,7 @@ todolist.vue
 
 import TodoItem from './TodoItem.vue';
 export default{
-    inject:["getData"],
+    inject:["todoListData"],
     components:{
         TodoItem,
     }

@@ -3,7 +3,7 @@
     <TodoList />
     <!-- Bu işlem kalan todo sayısını hesaplar.  -->
     <ResultBar
-      :itemCount="getData.todoList.length - getData.todoList.filter((todo) => todo.completed).length"
+      :itemCount="todoListData.todoList.length - todoListData.todoList.filter((todo) => todo.completed).length"
     />
     <!-- v-bind kullanarak itemCount'un güncel sayısını ResultBar component'ı içine yazdırabiliyoruz. -->
   </div>
@@ -18,7 +18,7 @@ export default {
     TodoList,
     ResultBar,
   },
-  inject: ["getData"], // inject kullanarak parent component'ımız olan app.vue'ya erişim sağladık.
+  inject: ["todoListData"], // inject kullanarak parent component'ımız olan app.vue'ya erişim sağladık.
   props: {
     //props kullanarak erişim sağladığımız app.vue içinden todoList'imizi çektik.
     todoList: {

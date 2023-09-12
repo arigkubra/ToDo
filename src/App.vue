@@ -21,14 +21,14 @@ import ListSection from "./components/ListSection.vue";
 export default {
   data(){
     return{
-      getData: {
+      todoListData: {
         todoList: []
       }
     }
   },
   provide(){
     return{
-      getData: this.getData,
+      todoListData: this.todoListData,
       deleteItem : this.deleteItem,
     }
   },
@@ -43,7 +43,7 @@ export default {
       }
       
       else{
-        this.getData.todoList.push({
+        this.todoListData.todoList.push({
         id: new Date().getTime(), //unique bir değer oluşturmak için şu anki saati ve tarihi milisaniye cinsinden bir sayıya dönüştürür. Id oluşturmak için kullanılır.
         text: todo,
         });
@@ -51,11 +51,11 @@ export default {
       
       },
       clearAll(todoList) {
-      this.getData.todoList = [];
+      this.todoListData.todoList = [];
     },
     
     deleteItem(todoItem) {
-      this.getData.todoList = this.getData.todoList.filter((t) => t != todoItem)
+      this.todoListData.todoList = this.todoListData.todoList.filter((t) => t != todoItem)
       }
     },
 
