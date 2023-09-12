@@ -1,7 +1,7 @@
 # Proje Başlığı
 
-Features of this todolist:
-* This project was built using Vue 3, Tailwind CSS and Daisy UI
+Features of this todo list:
+* This project was built using Vue 3, Tailwind CSS, and Daisy UI
 * Do not add empty to-dos
 * Edit added to-dos and save the edit
 * Clear input field after adding Todo
@@ -11,10 +11,7 @@ Features of this todolist:
 
 
 ## View
-
-![Screen record](video.mp4)
-
-
+https://github.com/arigkubra/ToDo/assets/69004093/4f275c6c-e54b-49ab-97fd-c62a30ed2564
 
 
 #### Project setup
